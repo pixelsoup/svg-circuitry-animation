@@ -1,0 +1,46 @@
+.cicuitryWrapper {
+  display: flex;
+}
+
+.cicuitryWrapper {
+  margin: auto;
+  height: 100%;
+  max-height: 100vh;
+}
+
+.circuitrySvg {
+  stop:nth-child(1) {
+    stop-color: hsl(20, 100%, 50%);
+  }
+
+  stop:nth-child(2) {
+    stop-color: hsl(80, 100%, 50%);
+  }
+}
+
+.circuitryPath {
+  stroke-width: 3;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
+  stroke-dasharray: var(--totalSvgLength) var(--totalSvgLength);
+}
+
+.circlesGroup {
+  opacity: 0;
+  animation: circleFade .5s .8s forwards 1;
+}
+
+@for $i from 5 through 120 {
+  .circuitryPath:nth-child(#{$i}) {
+    stroke: hsl($i * 30, 100%, 50%);
+    animation: strokeWidth 1.5s $i * .1s alternate infinite;
+  }
+}
+
+@for $i from 1 through 4 {
+  .circuitryPath:nth-child(#{$i}) {
+    stroke: white;
+  }
+}

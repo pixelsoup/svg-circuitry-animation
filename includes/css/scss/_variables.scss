@@ -1,0 +1,118 @@
+$bp-xs: 400px;
+$bp-sm: 568px;
+$bp-sm-2: 640px;
+$bp-md: 768px;
+$bp-md-2: 880px;
+$bp-lg: 1024px;
+$bp-lg-2: 1120px;
+$bp-xl: 1280px;
+$bp-xxl: 1800px;
+
+/* stylelint-disable color-hex-length */
+$black2: #fafafa;
+$black3: #f7f7f7;
+$black5: #f2f2f2;
+$black6: #f0f0f0;
+$black7: #ededed;
+$black8: #ebebeb;
+$black10: #e5e5e5;
+$black12: #e0e0e0;
+$black15: #d9d9d9;
+$black20: #cccccc;
+$black25: #bfbfbf;
+$black30: #b2b2b2;
+$black35: #a6a6a6;
+$black40: #999999;
+$black45: #8c8c8c;
+$black50: #7f7f7f;
+$black55: #737373;
+$black60: #666666;
+$black65: #595959;
+$black70: #4d4d4d;
+$black73: #454545;
+$black75: #404040;
+$black80: #333333;
+$black85: #262626;
+$black90: #1a1a1a;
+$black93: #393839;
+$black94: #343434;
+$black95: #333132;
+$black97: #2d2a2b;
+$black100: #000000;
+$black: #000000;
+$white: #ffffff;
+
+$grey: #6a858c;
+$navy: #002848;
+$navy50: #7f93a3;
+$navy85: #264863;
+$navy90: #1a3e5b;
+$navy95: #0a3252;
+
+$bluePrimary: #579ec8;
+$blueLight: #b3d4fc;
+
+$blue: #428fbd;
+$blue90: #68a8ce;
+$blue80: #79b1d3;
+$blue50: #abcee3;
+$blue15: #cee9f3;
+$blue10: #eef6fa;
+$blue8: #daebf7;
+$blue6: #e1f0f9;
+$blue5: #eaf4fb;
+$blueFlash: #1e72a5;
+
+$cyan: #03a9f4;
+$cyanDark: #0288d1;
+
+$alert: #de3226;
+$magenta: #e91e63;
+$magentaDark: #c2185b;
+
+$red: #ff5722;
+$redDark: #e64a19;
+$red5: #fdeee9;
+$dbRed: #d95843;
+$orange: #ffa500;
+$yellow: #e4b23a;
+
+$green: #51ac80;
+$greenDark: #388e3c;
+$green15: #d5ede3;
+$green10: #e9fcf3;
+$green5: #d5ede2;
+
+$text-color-primary: $black60;
+$text-link-color: $bluePrimary;
+
+$alert: #de3226;
+
+$dl-margin: 17; // (dl=data-large/dashboard) px not used in the variable for easier math calculations
+$form-item-margin: 15; // px not used in the variable for easier math calculations
+$form-input-height: 38; // px not used in the variable for easier math calculations
+$list-border-color: $black10;
+$form-bg-colour: $black2;
+$assetUploaderThumbSize: 65px;
+$lrItemHeight: 48px; // control the height of list-recurring items in one place
+$publishBtnPadding: 8px; // consistent padding for button variants with or without text
+
+// Gap Sizes
+$gapTiny: 5px;
+$gapSmall: 10px;
+$gapMedium: 15px;
+$gapLarge: 20px;
+$gapExtraLarge: 25px;
+
+// Gatsby Publishing - Build Menu and Toast
+$toast-status-icon-size: 40px;
+$toast-status-spinner-size: $toast-status-icon-size - 5px;
+
+// coordinate transition animations
+$helpTransitionTime: 150ms;
+
+:root {
+  --white: #{$white};
+  --blue: #{$blue};
+  --redDark: #{$redDark};
+}
