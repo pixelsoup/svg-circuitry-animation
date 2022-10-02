@@ -1,5 +1,5 @@
-/config.codekit3
-/index.html
-/includes/css/.DS_Store
-/includes/.DS_Store
-/includes/css/production.css
+config.codekit3
+**/*.DS_Store
+**/*.sass-cache
+**/*.css
+*.html
