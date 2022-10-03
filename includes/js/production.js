@@ -42,6 +42,7 @@ const animateSvg = () => {
     window.cancelAnimationFrame(handle)
   } else {
     // step through the frames until progress reaches 100%
+    // slow down animation by reducing value --> .7
     currentFrame += 1
     // Increase the strokeDashoffset values (from 0 to pathLength) to animate the <path>
     for (let j = 0; j < pathArray.length; j += 1) {

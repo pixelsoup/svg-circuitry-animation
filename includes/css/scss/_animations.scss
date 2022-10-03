@@ -97,3 +97,19 @@
     opacity: 1;
   }
 }
+
+// https://www.gradient-animator.com/
+
+@keyframes rainbowGlow {
+  0% {
+    background-position: 0% 66%
+  }
+
+  50% {
+    background-position: 100% 35%
+  }
+
+  100% {
+    background-position: 0% 66%
+  }
+}
