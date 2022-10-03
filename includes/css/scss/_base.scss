@@ -6,37 +6,8 @@
   --hue: 0;
 }
 
-@keyframes rainbow {
-  to {
-    --hue: 360;
-  }
 }
 
-@keyframes circleFade {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes strokeWidth {
-  0% {
-    stroke-width: 5;
-    opacity: 1;
-  }
-
-  50% {
-    stroke-width: .5;
-    opacity: 0;
-  }
-
-  100% {
-    stroke-width: 5;
-    opacity: 1;
-  }
 }
 
 html {
