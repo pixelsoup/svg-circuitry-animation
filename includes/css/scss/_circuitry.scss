@@ -16,34 +16,36 @@
   font-size: 70px;
   font-weight: 500;
   color: #232d2d;
+  margin: 0;
   opacity: 0;
-  // https://www.gradient-animator.com/
-  animation: fadeIn 3s 1s forwards 1, rainbowGlow 14s ease infinite;
   background: linear-gradient(147deg, #7cd7e9, #7acb6f, #e5d66f, #ff9d45, #ff4591, #a845ff, #45a7ff);
   background-size: 1400% 1400%;
   background-clip: text;
   -webkit-text-stroke: 4px transparent;
+  position: absolute;
+  z-index: 1;
+  transform: translateY(1.7px);
+  text-shadow: 0 0 13px rgb(255 255 255 / 73%);
+  animation: fadeIn 2s 12s forwards 1, rainbowGlow 10s ease infinite, growBigFast .5s 14.5s cubic-bezier(0.5, 0, 0.75, 0) forwards;
 }
 
-.svgHeading svg {
+.svgHeading {
+  position: absolute;
   width: 500px;
   height: 57px;
-
 }
 
 .svgHeadingPath {
-  stroke-width: 2;
+  opacity: 0;
   stroke: white;
-  animation: fadeIn 3s 1s forwards 1, rainbowGlow 14s ease infinite;
-  background: linear-gradient(147deg, #7cd7e9, #7acb6f, #e5d66f, #ff9d45, #ff4591, #a845ff, #45a7ff);
-  background-size: 1400% 1400%;
-  background-clip: text;
-  -webkit-text-stroke: 4px transparent;
+  stroke-width: 2;
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-miterlimit: 10;
-  stroke-dasharray: var(--totalSvgLength) var(--totalSvgLength);
+  // stroke-dasharray: var(--totalSvgLength2) var(--totalSvgLength2);
+  stroke-dasharray: 0 0;
   stroke-dashoffset: 100%;
+  animation: fadeIn 3s 11s forwards 1, dashArrayDelay 5s 11s forwards 1, fadeOut 1.5s 13s forwards 1;
 }
 
 .cicuitryWrapper {
@@ -83,14 +85,14 @@
 
 // Wrapper
 .cicuitryWrapper {
-  animation: fadeOut 3s 1s forwards 1;
+  animation: fadeOut 2s 11s forwards 1;
 }
 
 // face
 @for $i from 1 through 5 {
   .circuitryPath:nth-of-type(#{$i}) {
     stroke: white;
-    animation: fadeInOut 7s $i * 1.5s forwards 1;
+    animation: fadeInOut 5s $i * 1s forwards 1;
   }
 }
 
@@ -105,6 +107,6 @@
 // circles
 @for $i from 1 through 140 {
   .circuitCircle:nth-of-type(#{$i}) {
-    animation: fadeIn .5s .8s forwards 1, radiusFadePulse 1.5s $i * .1s forwards infinite;
+    animation: fadeIn 1.5s 1s forwards 1, radiusFadePulse 1.5s $i * .1s forwards infinite;
   }
 }

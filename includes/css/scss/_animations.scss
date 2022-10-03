@@ -1,3 +1,33 @@
+@keyframes transparentBg {
+  to {
+    background-color: transparent;
+  }
+}
+
+@keyframes dashArrayDelay {
+  0% {
+    stroke-dasharray: 0 0;
+  }
+
+  50% {
+    stroke-dasharray: var(--totalSvgLength2) var(--totalSvgLength2);
+  }
+
+  100% {
+    stroke-dasharray: var(--totalSvgLength2) var(--totalSvgLength2);
+  }
+}
+
+@keyframes growBigFast {
+  0% {
+    transform: scale(1.0);
+  }
+
+  100% {
+    transform: scale(50);
+  }
+}
+
 @keyframes rainbow {
   to {
     --hue: 360;
