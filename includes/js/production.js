@@ -1,15 +1,9 @@
-// window.CSS.registerProperty({
-//   name: "--hue",
-//   syntax: "<integer>",
-//   inherits: true,
-//   initialValue: "0",
-// });
-
 let currentFrame
 let totalFrames
 let handle
 const pathArray = []
 const pathLength = []
+
 // target each svg <path>
 const svgPaths = document.querySelectorAll('.circuitryPath')
 // Get a total count of the svg <path>s
