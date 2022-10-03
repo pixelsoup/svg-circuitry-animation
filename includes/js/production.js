@@ -1,3 +1,10 @@
+// window.CSS.registerProperty({
+//   name: "--hue",
+//   syntax: "<integer>",
+//   inherits: true,
+//   initialValue: "0",
+// });
+
 let currentFrame
 let totalFrames
 let handle
