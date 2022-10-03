@@ -6,6 +6,10 @@
   --hue: 0;
 }
 
+@property --hue {
+  syntax: "<integer>";
+  inherits: true;
+  initial-value: 0;
 }
 
 @font-face {
