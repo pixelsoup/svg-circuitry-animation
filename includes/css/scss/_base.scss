@@ -1,9 +1,8 @@
-:root {
-  --white: yellow;
-  --cyan: #00abed;
-  --red: #e64a19;
-  --green: #51ac80;
-  --hue: 0;
+@font-face {
+  font-family: "Monofur for Powerline";
+  font-style: normal;
+  src: url("/includes/css/fonts/monofur-for-powerline.woff2") format("woff2");
+  font-display: fallback;
 }
 
 @property --hue {
@@ -12,11 +11,12 @@
   initial-value: 0;
 }
 
-@font-face {
-  font-family: "Monofur for Powerline";
-  font-style: normal;
-  src: url("/includes/css/fonts/monofur-for-powerline.woff2") format("woff2");
-  font-display: fallback;
+:root {
+  --white: yellow;
+  --cyan: #00abed;
+  --red: #e64a19;
+  --green: #51ac80;
+  --hue: 0;
 }
 
 html {

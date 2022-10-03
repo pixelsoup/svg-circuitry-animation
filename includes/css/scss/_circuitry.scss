@@ -77,7 +77,7 @@
 @for $i from 1 through 5 {
   .circuitryPath:nth-of-type(#{$i}) {
     stroke: white;
-    animation: fadeInOut 10s $i * 1.5s forwards 1;
+    animation: fadeInOut 7s $i * 1.5s forwards 1;
   }
 }
 
