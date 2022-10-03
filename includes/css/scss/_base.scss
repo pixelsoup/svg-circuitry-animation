@@ -8,6 +8,11 @@
 
 }
 
+@font-face {
+  font-family: "Monofur for Powerline";
+  font-style: normal;
+  src: url("/includes/css/fonts/monofur-for-powerline.woff2") format("woff2");
+  font-display: fallback;
 }
 
 html {
