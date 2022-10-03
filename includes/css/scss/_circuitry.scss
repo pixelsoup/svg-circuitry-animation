@@ -1,5 +1,39 @@
-.cicuitryWrapper {
+.circuitHeadingWrapper {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.circuitHeading {
+  font-family: 'Monofur for Powerline', Helvetica, Arial, sans-serif;
+  font-size: 70px;
+  font-weight: 500;
+  color: #232d2d;
+  opacity: 0;
+  animation: fadeIn 3s 20s forwards 1;
+  background: linear-gradient(-86deg, hsl(var(--hue), 100%, 85%), hsl(var(--hue), 100%, 53%), hsl(var(--hue), 100%, 91%));
+  background-clip: text;
+  -webkit-text-stroke: 4px transparent;
+}
+
+.cicuitryWrapper {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .cicuitryWrapper {
@@ -19,28 +53,45 @@
 }
 
 .circuitryPath {
+  opacity: 1;
   stroke-width: 3;
   fill: none;
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-miterlimit: 10;
   stroke-dasharray: var(--totalSvgLength) var(--totalSvgLength);
+  stroke-dashoffset: 100%;
 }
 
-.circlesGroup {
+.circuitCircle {
+  position: relative;
   opacity: 0;
-  animation: circleFade .5s .8s forwards 1;
 }
 
-@for $i from 5 through 120 {
-  .circuitryPath:nth-child(#{$i}) {
+// Wrapper
+.cicuitryWrapper {
+  animation: fadeOut 3s 20s forwards 1;
+}
+
+// face
+@for $i from 1 through 5 {
+  .circuitryPath:nth-of-type(#{$i}) {
+    stroke: white;
+    animation: fadeInOut 10s $i * 1.5s forwards 1;
+  }
+}
+
+// head
+@for $i from 6 through 120 {
+  .circuitryPath:nth-of-type(#{$i}) {
     stroke: hsl($i * 30, 100%, 50%);
     animation: strokeWidth 1.5s $i * .1s alternate infinite;
   }
 }
 
-@for $i from 1 through 4 {
-  .circuitryPath:nth-child(#{$i}) {
-    stroke: white;
+// circles
+@for $i from 1 through 140 {
+  .circuitCircle:nth-of-type(#{$i}) {
+    animation: fadeIn .5s .8s forwards 1, radiusFadePulse 1.5s $i * .1s forwards infinite;
   }
 }
